@@ -12,13 +12,12 @@ public class InterpreterTests {
     public void SimpleAdd() {
         String program = """
                 class SimpleAdd
-                    
+                
                     shared start()
                         number x
                         number y
                         number z
-                        number k
-                        
+                
                         x = 6
                         y = 6
                         z = x + y 
@@ -36,21 +35,21 @@ public class InterpreterTests {
                 class SimpleAdd
                     number x
                     number y
-                    
+                
                     construct()
                         x = 6
                         y = 6
-                        
+                
                     add()
                         number z
-                        z = x + y 
+                        z = x + y
                         console.write(z)
-                        
+                
                     shared start()
                         SimpleAdd t
                         t = new SimpleAdd()
                         t.add()
-                        
+                
                 """;
         var tranNode = run(program);
         var c = getConsole(tranNode);
