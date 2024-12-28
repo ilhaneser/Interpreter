@@ -17,7 +17,7 @@ public class InterpreterTests {
                         number x
                         number y
                         number z
-                        number j
+                        number k
                         
                         x = 6
                         y = 6
